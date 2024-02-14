@@ -1,0 +1,24 @@
+
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+  </head>
+  <body>
+    <a-scene mindar-image="imageTargetSrc: ./family.mind;" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+      <!-- <video src="video/IMG_4450.MP4" preload="auto" id="vid" response-type="arraybuffer" controls loop crossorigin  autoplay></video> -->
+      <a-entity mindar-image-target="targetIndex: 0">
+        <a-plane  src="video/IMG_4450.MP4" opaciy="0.5" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>
+      </a-entity>
+      
+    </a-scene>
+  </body>
+</html>
+
+<style>
+  .scanning{
+    display: none !important;
+  }
+</style>
