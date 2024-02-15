@@ -15,7 +15,8 @@
     <!-- <video src="video/IMG_4450.MP4" preload="auto" id="vid" response-type="arraybuffer" controls loop crossorigin  autoplay></video> -->
     <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
     <a-entity mindar-image-target="targetIndex: 0">
-      <a-plane src="IMG_4450.MP4" opaciy="0.5" position="0 0 0" height="0.552" width="1" rotation="0 0 0" controls loop crossorigin  autoplay>
+      <a-video src="IMG_4450.MP4" id="myvideo" position="0 0 0" height="0.552" width="1" rotation="0 0 0" id="vid" hide-on-play="#vid" autoplay playsinline></a-video>
+      <!-- <a-plane src="#myvideo" opaciy="0.5" position="0 0 0" height="0.552" width="1" rotation="0 0 0" controls loop crossorigin  autoplay> -->
 
       </a-plane>
     </a-entity>
