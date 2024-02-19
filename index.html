@@ -8,8 +8,22 @@
 </head>
 
 <body>
-  <video src="jurassic_video.mp4" playsinline autoplay muted></video>
+  <a-scene mindar-image="imageTargetSrc: ./family.mind;filterMinCF:0.1; filterBeta: 10;" vr-mode-ui="enabled: false"
+    device-orientation-permission-ui="enabled: true">
+    <a-assets>
+      <video id="vid" src="jurassic_video.mp4" style="width: 1600px;height: 1066px;"  
+      autoplay="true" loop="true" muted></video>
+    </a-assets>
+    <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
+    <a-entity mindar-image-target="targetIndex: ">
+      <!-- <a-video src="jurassic_video.mp4" type="video/mp4"  position="0 0 0" height="0.552" width="1" rotation="0 0 0" id="vid" hide-on-play="#vid" playsinline autoplay  loop></a-video> -->
+      <a-video src="#vid" position="0 0 0" rotation="0 0 0">
+
+      </a-video>
+    </a-entity>
+
+  </a-scene>
 
 </body>
 
