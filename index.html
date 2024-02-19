@@ -38,14 +38,17 @@
 </style>
 
 <script>
-  var vid = document.getElementById("myVideo");
-  vid.onloadstart = function () {
-    console.log("asdkwqdjwqdjqwjwjd");
-    setTimeout(() => {
+  // window.onload = function () {
+  //   playVideo();
+  // };
 
-      vid.play()
-    }, 1000);
-  };
+  // function playVideo() {
+
+  // }
+  setTimeout(() => {
+    var video = document.getElementById("myVideo");
+    video.play();
+  }, 1000);
 
 
 </script>
