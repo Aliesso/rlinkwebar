@@ -11,7 +11,7 @@
   <a-scene style="height: 100px;" mindar-image="imageTargetSrc: ./family.mind;filterMinCF:0.1; filterBeta: 10;"
     vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: true">
     <a-assets>
-      <video id="myVideo" src="IMG_4450.mp4" style="width: 1600px;height: 1066px;" autoplay="true" loop="true"></video>
+      <video id="myVideo" src="IMG_4450.mp4" style="width: 1600px;height: 1066px;" autoplay="true" loop="true" autoplay></video>
     </a-assets>
     <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
@@ -38,17 +38,10 @@
 </style>
 
 <script>
-  // window.onload = function () {
-  //   playVideo();
-  // };
-
-  // function playVideo() {
-
-  // }
-  setTimeout(() => {
+  document.addEventListener("DOMContentLoaded", function () {
+    console.log("asdwqdqwdwqdwqd");
     var video = document.getElementById("myVideo");
     video.play();
-  }, 1000);
-
-
+  }
+  );
 </script>
