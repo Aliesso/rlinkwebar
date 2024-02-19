@@ -10,13 +10,11 @@
 <body>
   <a-scene mindar-image="imageTargetSrc: ./family.mind;filterMinCF:0.1; filterBeta: 10;" vr-mode-ui="enabled: false"
     device-orientation-permission-ui="enabled: true">
-    <a-assets>
-      <!-- <video src="IMG_4450.mp4" style="width: 1600px;height: 1066px;" preload="auto" id="myvideo"
-        response-type="arraybuffer" playsinline autoplay loop></video> -->
-    </a-assets>
+      <video src="jurassic_video.mp4" preload="auto" id="myvideo" response-type="arraybuffer" playsinline autoplay 
+        loop></video>
     <a-entity mindar-image-target="targetIndex: ">
-      <a-video src="IMG_4450.mp4"    height="0.552" width="1" type="video/mp4"  position="0 0 0"  rotation="0 0 0"  playsinline autoplay loop></a-video>
-      <!-- <a-plane src="IMG_4450.mp4" style="width: 1600px;height: 1066px;" position="0 0 0" rotation="0 0 0"> -->
+      <a-video src="IMG_4450.mp4" type="video/mp4"  position="0 0 0" height="0.552" width="1" rotation="0 0 0" id="vid" hide-on-play="#vid" playsinline autoplay  loop></a-video>
+      <!-- <a-plane src="#myvideo"  position="0 0 0" height="0.552" width="1" rotation="0 0 0"> -->
 
       </a-plane>
     </a-entity>
