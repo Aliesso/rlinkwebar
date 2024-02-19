@@ -11,7 +11,7 @@
   <a-scene style="height: 100px;" mindar-image="imageTargetSrc: ./family.mind;filterMinCF:0.1; filterBeta: 10;"
     vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: true">
     <a-assets>
-      <video id="myVideo" src="IMG_4450.mp4" style="width: 1600px;height: 1066px;" autoplay="true" loop="true" autoplay></video>
+      <video id="myVideo" src="IMG_4450.mp4" style="width: 1600px;height: 1066px;"  loop="true" ></video>
     </a-assets>
     <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
@@ -26,7 +26,7 @@
   <!-- <video id="myVideo" width="320" height="240" src="jurassic_video.mp4" type="video/mp4" loop>
 
 </video> -->
-
+<button onclick="playVideo()" style="position: absolute;z-index: 999;">Play video</button>
 </body>
 
 </html>
@@ -38,10 +38,9 @@
 </style>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    console.log("asdwqdqwdwqdwqd");
+  function playVideo() {
+    console.log("Asdwqdqwdwqdwqd");
     var video = document.getElementById("myVideo");
     video.play();
   }
-  );
 </script>
