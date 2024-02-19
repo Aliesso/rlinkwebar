@@ -38,10 +38,14 @@
 </style>
 
 <script>
-  setTimeout(() => {
+  var vid = document.getElementById("myVideo");
+  vid.onloadstart = function () {
+    console.log("asdkwqdjwqdjqwjwjd");
+    setTimeout(() => {
 
-    var video = document.getElementById("myVideo");
-    video.play();
-  }, 3000);
+      vid.play()
+    }, 1000);
+  };
+
 
 </script>
