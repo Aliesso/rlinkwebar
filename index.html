@@ -9,13 +9,13 @@
 
 <body>
   <a-scene style="height: 100px;" mindar-image="imageTargetSrc: ./family.mind;filterMinCF:0.1; filterBeta: 10;"
-    vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: true">
+    vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
     <!-- <video id="myVideo" src="IMG_4450_compress.mp4" style="width: 1600px;height: 1066px;" autoplay="true" loop="true"
       autoplay muted></video> -->
 
     <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
-    <a-entity mindar-image-target="targetIndex: ">
+    <a-entity mindar-image-target="targetIndex: 0">
       <a-plane src="IMG_4450_compress.mp4" type="video/mp4" style="width: 1600px;height: 1066px;" position="0 0 0"
         rotation="0 0 0" id="vid" hide-on-play="#vid" playsinline autoplay loop muted></a-plane>
     </a-entity>
