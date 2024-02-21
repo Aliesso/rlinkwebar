@@ -7,6 +7,34 @@
   <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.2/dist/mindar-image-aframe.prod.js"></script>
 
   <script>
+     document.addEventListener("DOMContentLoaded", function() {
+    // Pop-up div'ini seç
+    const popup = document.getElementById("popup");
+
+    // Pop-up açma işlevi
+    function openPopup() {
+      popup.style.display = "block";
+    }
+
+    // Pop-up kapatma butonunu seç
+    const closeButton = document.getElementById("closeButton");
+
+    // Pop-up kapatma işlevi
+    closeButton.addEventListener("click", function() {
+      popup.style.display = "none";
+      playVR()
+
+    });
+
+    // Kapatma işlevi
+    function yourFunction() {
+
+      alert("Pop-up kapandı, fonksiyon çalıştı!");
+    }
+
+    // Sayfa yüklendiğinde pop-up'ı aç
+    openPopup();
+  });
     function playVR() {
       const paintandquestPreviewButton = document.querySelector("#paintandquest-preview-button");
       paintandquestPreviewButton.setAttribute("visible", false);
@@ -20,9 +48,7 @@
         document.querySelector("#paintandquest-video-webm").play();
       }
     }
-    setTimeout(() => {
-      playVR()
-    }, 1000);
+
     const showInfo = () => {
       let y = 0;
       const profileButton = document.querySelector("#profile-button");
@@ -165,7 +191,18 @@
     #example-scanning-overlay {
       display: none !important;
     }
-
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+    }
     body {
       margin: 0;
     }
@@ -256,6 +293,10 @@
 </head>
 
 <body>
+  <div id="popup" class="popup">
+    <p>Pop-up içeriği buraya gelecek.</p>
+    <button id="closeButton">Kapat</button>
+  </div>
   <div class="example-container">
     <div id="example-scanning-overlay" class="hidden">
       <div class="inner">
