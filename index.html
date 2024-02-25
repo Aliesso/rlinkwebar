@@ -3,6 +3,10 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
   <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.2/dist/mindar-image-aframe.prod.js"></script>
 
@@ -11,9 +15,12 @@
   <div id="popup" class="popup">
     <div class="items">
 
-      <img src="assets/card-example/icons/r_link_logo.svg" alt="">
-      <p>Welcome RLink WebAR!</p>
-      <button id="closeButton">Start</button>
+      <img src="assets/card-example/icons/Augdepotlogo.svg" alt="">
+      <p>Personalize and shop Augmented Products</p>
+      <button id="closeButton">START</button>
+    </div>
+    <div class="link_to">
+      <a href="https://www.rlinkar.com/" target="_blank">Powered by R Link AR</a>
     </div>
   </div>
   <div class="example-container">
@@ -104,15 +111,9 @@
     position: fixed;
     width: 100%;
     height: 100%;
-    /* top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); */
-    /* padding: 20px; */
-    background-color: #00215D;
+    background-color: #EFEFEF;
     text-align: center;
     margin: auto;
-    /* border: 1px solid #ccc; */
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
     z-index: 999;
   }
 
@@ -124,42 +125,56 @@
   }
 
   .popup .items p {
-    font-size: 18px;
-    color: white;
-    font-weight: 600;
+    font-size: 24px;
+    font-family: "Montserrat", sans-serif;
+    color: black;
+    line-height: 36px;
+    font-weight: 500;
   }
 
   .popup .items img {
-    animation: heartbeat 1.5s infinite;
+    animation: heartbeat 1.5s;
   }
 
   .popup .items button {
     cursor: pointer;
-    width: 250px;
-    padding: 6px 18px;
-    height: 50px;
-    border-radius: 4px;
-    font-size: 15px;
-    font-weight: 600;
-    font-style: normal;
-    line-height: normal;
+    width: 362px;
+    height: 44px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
     outline: none;
-    background: linear-gradient(270deg, #068be0 1.02%, #37b1ff 88.43%);
-    height: 30px;
+    font-family: "Montserrat", sans-serif;
+    background-color: #191919;
     border: 1px solid transparent;
+    border-radius: 30px;
     color: #fcfcfe;
-    font-size: 12px;
-    height: 30px;
+    transition: .3s ease-in-out;
   }
 
+  .popup .items button:hover {
+    background-color: #232323;
+  }
+.popup .link_to{
+  position: absolute;
+  bottom: 40px;
+  right: 64px;
+}
+.popup .link_to a{
+color: #007DC1;
+}
+
+.popup .link_to a:hover{
+text-decoration: none;
+}
   @keyframes heartbeat {
     0% {
-      transform: scale(1);
+      transform: scale(0.5);
     }
 
-    50% {
+    /* 50% {
       transform: scale(1.3);
-    }
+    } */
 
     100% {
       transform: scale(1);
