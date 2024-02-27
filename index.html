@@ -31,7 +31,8 @@
       </div>
     </div>
     <!-- https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.2.2/examples/image-tracking/assets/card-example/card.mind; -->
-    <a class="video_open" href="./assets/card-example/portfolio/IMG_4450_compress.mp4" target="_blank">Open video</a>
+    <a class="video_open" href="./assets/card-example/portfolio/IMG_4450_compress.mp4"
+      onclick="openInNewTab(event)">Open video</a>
 
     <a-scene mindar-image="imageTargetSrc: ./family.mind; showStats: false; uiScanning: #example-scanning-overlay;"
       embedded color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false"
@@ -84,6 +85,10 @@
 
     openPopup();
   });
+  function openInNewTab(event) {
+    event.preventDefault();
+    window.open(event.target.href, '_blank');
+  }
   function playVR() {
     const paintandquestPreviewButton = document.querySelector("#paintandquest-preview-button");
     paintandquestPreviewButton.setAttribute("visible", false);
