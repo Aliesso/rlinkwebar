@@ -31,6 +31,8 @@
       </div>
     </div>
     <!-- https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.2.2/examples/image-tracking/assets/card-example/card.mind; -->
+    <a class="video_open" href="./assets/card-example/portfolio/IMG_4450_compress.mp4" target="_blank">Open video</a>
+
     <a-scene mindar-image="imageTargetSrc: ./family.mind; showStats: false; uiScanning: #example-scanning-overlay;"
       embedded color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false"
       device-orientation-permission-ui="enabled: false">
@@ -102,6 +104,22 @@
 </script>
 
 <style>
+  .video_open {
+    text-decoration: unset;
+    background-color: #EFEFEF;
+    padding: 10px 16px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+    z-index: 2;
+    font-size: 15px;
+    font-family: "Montserrat", sans-serif;
+    color: black;
+    line-height: 36px;
+    font-weight: 500;
+  }
+
   #example-scanning-overlay {
     display: none !important;
   }
@@ -155,18 +173,21 @@
   .popup .items button:hover {
     background-color: #232323;
   }
-.popup .link_to{
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-}
-.popup .link_to a{
-color: #007DC1;
-}
 
-.popup .link_to a:hover{
-text-decoration: none;
-}
+  .popup .link_to {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .popup .link_to a {
+    color: #007DC1;
+  }
+
+  .popup .link_to a:hover {
+    text-decoration: none;
+  }
+
   @keyframes heartbeat {
     0% {
       transform: scale(0.5);
